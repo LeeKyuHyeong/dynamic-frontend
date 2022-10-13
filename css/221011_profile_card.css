@@ -132,7 +132,7 @@ body
   z-index: 1;
   width: calc(100% - 20px);
   height: calc(100% - 20px);
-  filter: grayscale();
+  /* filter: grayscale(); */
 }
 
 .card .content
