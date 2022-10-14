@@ -89,6 +89,12 @@ body
   justify-content: space-between;
 }
 
+.wrap .login_Form .bottom span
+{
+  font-size: 0.8em;
+}
+
+
 .right
 {
   position: absolute;
@@ -101,8 +107,6 @@ body
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .right .round
 {
