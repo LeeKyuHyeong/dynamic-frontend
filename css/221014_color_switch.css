@@ -20,7 +20,8 @@ body
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: pink;  
+  transition: 0.5s;
+  background: pink;
 }
 
 .wrap
@@ -31,6 +32,7 @@ body
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
 }
 
 .wrap .login_Form
@@ -51,6 +53,7 @@ body
   height: 20px;
   background: pink;
   margin-right: 5px;
+  transition: 0.5s;
 }
 
 .wrap .login_Form .top span
@@ -81,6 +84,7 @@ body
   background: pink;  
   border: none;
   border-radius: 3px;
+  transition: 0.5s;
 }
 
 .wrap .login_Form .bottom
@@ -149,8 +153,9 @@ body
 .right .checked
 {
   border: 2px solid black;
-  width: 30px;
-  height: 30px;
+  /* width: 30px;
+  height: 30px; */
+  scale: 1.25;
   transition: 0.5s;
 }
 
