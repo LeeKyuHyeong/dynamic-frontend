@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+*
+{
+  margin: 0;
+  padding : 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;  
+}
+
+a
+{
+  text-decoration: none;
+  color: black;
+}
+
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: pink;  
+}
+
+.wrap
+{
+  background: #fff;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap .login_Form
+{
+  padding:50px;
+}
+
+.wrap .login_Form .top
+{
+  margin-bottom: 10px;
+}
+
+.wrap .login_Form .top i
+{
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  background: pink;
+  margin-right: 5px;
+}
+
+.wrap .login_Form .top span
+{
+  gap: 2px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.wrap .login_Form form
+{
+  width: 100%;
+  height: 180px;
+}
+
+.wrap .login_Form form input
+{
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.wrap .login_Form form .btn_login
+{
+  width: 100%;
+  height: 40px;
+  background: pink;  
+  border: none;
+  border-radius: 3px;
+}
+
+.wrap .login_Form .bottom
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.right
+{
+  position: absolute;
+  right:0;
+  background: #fff;
+  width: 70px;
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.right .round
+{
+  width: 25px;
+  height: 25px;  
+  border-radius: 50%;
+  border: none;
+}
+
+.right .round:hover
+{
+  cursor: pointer;
+}
+
+.right .round:nth-child(1)
+{
+  background: pink;
+}
+
+.right .round:nth-child(2)
+{
+  background: green;
+}
+
+.right .round:nth-child(3)
+{
+  background: yellow;
+}
+
+.right .round:nth-child(4)
+{
+  background: skyblue;
+}
+
+.right .round:nth-child(5)
+{
+  background: orange;
+}
+
+.right .checked
+{
+  border: 2px solid black;
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+}
+

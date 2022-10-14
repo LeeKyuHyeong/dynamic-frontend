@@ -11,7 +11,7 @@
 body 
 {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   min-height: 100vh;
   background: #28272a;  
