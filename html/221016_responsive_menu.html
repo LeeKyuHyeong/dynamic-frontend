@@ -29,6 +29,7 @@
         </span>
       </div>
     </div>
+    <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
     <div class="searchBox">
       <input type="text" placeholder="Search ...">
     </div>
@@ -38,14 +39,31 @@
     let searchBtn = $('.searchBtn');
     let closeBtn = $('.closeBtn');
     let searchBox = $('.searchBox');
+    let header = $('header');
+    let navigation = $('.navigation');
+    let menuToggle = $('.menuToggle');
 
-    $('.searchBtn').click(() => {
-      $('.searchBox').addClass('active');
-    });
-    
-    $('.closeBtn').click(() => {
-      $('.searchBox').removeClass('active');
+    searchBtn.click(() => {
+      searchBox.addClass('active');
+      closeBtn.addClass('active');
+      searchBtn.addClass('active');
+      menuToggle.addClass('hide');
     })
+    
+    closeBtn.click(() => {
+      searchBox.removeClass('active');
+      closeBtn.removeClass('active');
+      searchBtn.removeClass('active');
+      menuToggle.removeClass('hide');
+    })
+
+    menuToggle.click(() => {
+      header.toggleClass('open');
+      searchBox.removeClass('active');
+      closeBtn.removeClass('active');
+      searchBtn.removeClass('active');
+    })
+
   </script>
 </body>
 </html>

@@ -127,11 +127,92 @@ header .search
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+.searchBtn
+{
+  position: relative;
+  left: 30px;
+  top: 2.5px;
+  transition: 0.5s ease-in-out;
+}
 
+.searchBtn.active
+{
+  left: 0;
+}
 
+.closeBtn
+{
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  scale: 0;
+}
 
+.closeBtn.active
+{
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+  scale: 1;
+}
 
+.menuToggle
+{
+  position: relative;
+  display: none;
+}
 
+/* now, make it responsive */
+@media (max-width: 800px)
+{
+  .searchBtn
+  {
+    left: 0;
+  }
+
+  .menuToggle
+  {
+    position: absolute;
+    right: 30px;
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  header .navigation
+  {
+    position: absolute;    
+    opacity: 0;
+    visibility: hidden;
+    left: 100%;
+  }
+  header.open .navigation
+  {
+    top: 80px;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  header.open .navigation li a
+  {
+    font-size: 1.25em;
+  }
+
+  .hide
+  {
+    display: none;
+  }
+
+}
 
 
 
