@@ -61,7 +61,7 @@
         h = h - 12;
       }
       
-      hours.html(h);
+      hours.html(h == 0 ? 12 : h);
       minutes.html(m);
       seconds.html(s);
 
