@@ -1,0 +1,58 @@
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #eaeef0;
+}
+
+.loader
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader span
+{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: #eaeef0;
+  border: 6px solid #eaeef0;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 1),
+  8px 8px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.loader span::before
+{
+  content: '';
+  position: absolute;
+  inset: 40px;
+  background: #eaeef0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
