@@ -6,10 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="/css/221025_circle_text.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
   <div class="loader">
+    <div class="text">
+      <p>Neumorphism Gradient Loading Animation Effects-</p>
+    </div>
     <span><i></i></span>
   </div>
+  <script>
+    let text = $('.text p');
+    
+    text.html(text.text().split("").map((char,i) => 
+      `<b style="transform:rotate(${i * 7.64}deg)">${char}</b>`
+    ).join(""));
+    
+    // text.html(hi);
+
+  </script>
 </body>
 </html>
