@@ -18,15 +18,43 @@
       <i></i>
     </label>
     <label>
-      <input type="checkbox" class="checkbox" id="chk1">
+      <input type="checkbox" class="checkbox" id="chk2">
       <i></i>
     </label>
     <label>
-      <input type="checkbox" class="checkbox" id="chk1">
+      <input type="checkbox" class="checkbox" id="chk3">
       <i></i>
     </label>
   </div>
   <button class="reset">Reset Game</button>
+  <script>
+    let chk1 = $('#chk1');
+    let chk2 = $('#chk2');
+    let chk3 = $('#chk3');
+    let reset = $('.reset');
+
+    chk1.click(() => {
+      if(chk1.is(':checked')) chk1.attr('disabled', true);
+    });
+
+    chk2.click(() => {
+      if(chk2.is(':checked')) chk2.attr('disabled', true);
+    });
+
+    chk3.click(() => {
+      if(chk3.is(':checked')) chk3.attr('disabled', true);
+    });
+
+    reset.click(() => {
+      chk1.attr('disabled', false);
+      chk2.attr('disabled', false);
+      chk3.attr('disabled', false);
+      chk1.attr('checked', false);
+      chk2.attr('checked', false);
+      chk3.attr('checked', false);
+    });
+
+  </script>
 </body>
 
 </html>

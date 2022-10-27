@@ -38,7 +38,9 @@ h2 {
 }
 
 .box label input {
-  /* appearance: none; */
+  position: relative;
+  appearance: none;
+  z-index: 10;
 }
 
 .box label i {
@@ -57,12 +59,12 @@ h2 {
 
 .box label:nth-child(2) i {
   background-image: url(/img/mario_mid.jpg);
-  animation: animate 0.6s linear infinite;
+  animation: animate 0.4s steps(3) infinite;
 }
 
 .box label:nth-child(3) i {
   background-image: url(/img/mario_bottom.jpg);
-  animation: animate 0.7s linear infinite;
+  animation: animate 0.7s steps(3) infinite;
 }
 
 @keyframes animate {
@@ -74,3 +76,40 @@ h2 {
     background-position: 600px;
   }
 }
+
+.box label input:checked ~ i
+{
+  animation-play-state: paused;
+}
+
+.reset
+{
+  margin-top: 40px;
+  border: none;
+  font-size: 1.25em;
+  padding: 10px 25px;
+  background: #333;
+  color: #fff;
+}
+
+.reset:active
+{
+  background: #d63c3c;
+  transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
