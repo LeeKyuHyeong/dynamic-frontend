@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/221027_dropdown_menu.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+  <div class="dropdown">
+    <input type="text" class="text02" readonly placeholder="Dropdown Menu">
+    <div class="option">
+      <div onmouseover="show('Html')">Html</div>
+      <div onmouseover="show('CSS')">CSS</div>
+      <div onmouseover="show('Javascript')">Javascript</div>
+      <div onmouseover="show('ReactJS')">ReactJS</div>
+      <div onmouseover="show('PhotoShop')">PhotoShop</div>
+    </div>
+  </div>
+  <script>
+    function show(a) {
+      $('.text02').val(a);
+    }
+    let dropdown = $('.dropdown');
+
+    dropdown.click(() => {
+      dropdown.toggleClass('active');
+    })
+  </script>
+</body>
+</html>
