@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="/css/2022_10/221031_calculator.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+  <div class="calculator">
+    <div class="buttons">
+      <h2 id="value">123</h2>
+      <span id="clear">Clear</span>
+      <span>/</span>
+      <span>*</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+      <span id="minus">-</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span id="plus">+</span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>0</span>
+      <span>00</span>
+      <span>.</span>
+      <span id="equal">=</span>
+    </div>
+  </div>
+  <script>
+    let buttons = $('.buttons');
+    let btn = $('span');
+    let value = $('#value');
+
+    for(let i = 0; i < btn.length; i++) {
+      btn[i].click(() => {
+        console.log(i);
+      })
+    }
+
+    // btn.map((i) => {
+    //   // console.log(i);
+    //   btn.click((e) => {
+    //     // console.log($(this).text());
+    //     // console.log($(this).html());
+    //     // console.log($(this));
+
+    //     // console.log($(e.target).html());
+
+    //     if($(e.target).html() == "="){
+    //       console.log("=");
+    //       // value.html(this.html());
+    //       console.log(value.html());
+    //     }
+    //   })
+    // })
+  </script>
+</body>
+</html>
