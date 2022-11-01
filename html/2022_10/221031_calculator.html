@@ -37,11 +37,16 @@
     let btn = $('span');
     let value = $('#value');
 
-    for(let i = 0; i < btn.length; i++) {
-      btn[i].click(() => {
-        console.log(i);
-      })
-    }
+    
+    btn.click((i) => {
+      console.log(i.target.innerText);
+      console.log(value.innerHtml);
+      if(i.target.innerText == "=") {
+        console.log("= click");
+        value.innerText = eval(value.innerText);
+      }
+    })
+    
 
     // btn.map((i) => {
     //   // console.log(i);
