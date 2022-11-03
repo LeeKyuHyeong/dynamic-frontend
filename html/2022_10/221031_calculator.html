@@ -36,14 +36,17 @@
     let buttons = $('.buttons');
     let btn = $('span');
     let value = $('#value');
-
+    console.log(value.html());
     
     btn.click((i) => {
-      console.log(i.target.innerText);
-      console.log(value.innerHtml);
+      // console.log(i.target.innerText);
+      // console.log(value.innerText);
+      console.log($(i.target).html())
       if(i.target.innerText == "=") {
         console.log("= click");
-        value.innerText = eval(value.innerText);
+        // value.innerText = eval(value.innerText);
+        value.html(eval(value.html));
+        console.log(value.html());
       }
     })
     
