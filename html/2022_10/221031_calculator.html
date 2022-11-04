@@ -9,6 +9,7 @@
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
+  <div class="toggleBtn"></div>
   <div class="calculator">
     <div class="buttons">
       <h2 id="value">123</h2>
@@ -36,37 +37,28 @@
     let buttons = $('.buttons');
     let btn = $('span');
     let value = $('#value');
-    console.log(value.html());
-    
+    let toggleBtn = $('.toggleBtn');
+    let body = $('body');
+
+    toggleBtn.click(() => {
+      body.toggleClass('dark');
+    })
+
     btn.click((i) => {
-      // console.log(i.target.innerText);
-      // console.log(value.innerText);
       console.log($(i.target).html())
       if(i.target.innerText == "=") {
-        console.log("= click");
-        // value.innerText = eval(value.innerText);
-        value.html(eval(value.html));
-        console.log(value.html());
+        value.html(eval(value.html()));
+      } else {
+        if(i.target.innerText == "Clear") {
+          value.html("");
+        } else {
+          console.log($(i.target).html());
+          // value.innerText += $(i.target).html();
+          value.html(value.html() + $(i.target).html());
+        }
       }
     })
     
-
-    // btn.map((i) => {
-    //   // console.log(i);
-    //   btn.click((e) => {
-    //     // console.log($(this).text());
-    //     // console.log($(this).html());
-    //     // console.log($(this));
-
-    //     // console.log($(e.target).html());
-
-    //     if($(e.target).html() == "="){
-    //       console.log("=");
-    //       // value.html(this.html());
-    //       console.log(value.html());
-    //     }
-    //   })
-    // })
-  </script>
+    </script>
 </body>
 </html>
