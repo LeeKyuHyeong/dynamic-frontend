@@ -4,3 +4,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+.container
+{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-reflect: below 0 ;
+}
+
+.container .loader
+{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
