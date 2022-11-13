@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2022_11/221105_pwd_validation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="box">
+    <div class="inputbox">
+      <input type="password" id="pwd" placeholder="Password" onkeyup="checkPwd(this.value)">
+      <span id="toggleBtn">
+        <ion-icon id="show" name="eye-outline"></ion-icon>
+        <ion-icon id="hide" name="eye-off-outline"></ion-icon>
+      </span>
+    </div>
+    <div class="validation">
+      <ul>
+        <li id="lower">At least one lowercase character</li>
+        <li id="upper">At least one uppercase character</li>
+        <li id="number">At least one number</li>
+        <li id="special">At least one special character</li>
+        <li id="length">At least one 8 characters</li>
+      </ul>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  
+  <script>
+    let pwd = $('#pwd');
+    let toggleBtn = $('#toggleBtn');
+
+    let lowerCase = $('#lower');
+    let upperCase = $('#upper');
+    let digit = $('#number');
+    let specialChar = $('#special');
+    let minLength = $('#length');
+
+    function checkPwd(data) {
+      //javascript regular expression pattern
+      const lower = new RegExp('(?=.*[a-z])');
+      const upper = new RegExp('(?=.*[A-Z])');
+      const number = new RegExp('(?=.*[0-9])');
+      const special = new RegExp('(?=.*[!@#\$%\^&\*])');
+      const length = new RegExp('(?=.{8,})');
+
+      //Lower case validation check
+      if(lower.test(data)){
+        lowerCase.addClass('valid');
+      } else {
+        lowerCase.removeClass('valid');
+      }
+
+      //Upper case validation check
+      if(upper.test(data)){
+        upperCase.addClass('valid');
+      } else {
+        upperCase.removeClass('valid');
+      }
+
+      //Number validation check
+      if(number.test(data)){
+        digit.addClass('valid');
+      } else {
+        digit.removeClass('valid');
+      }
+
+      //Special Character validation check
+      if(special.test(data)){
+        specialChar.addClass('valid');
+      } else {
+        specialChar.removeClass('valid');
+      }
+
+      //min Length validation check
+      if(length.test(data)){
+        minLength.addClass('valid');
+      } else {
+        minLength.removeClass('valid');
+      }
+    }
+
+    toggleBtn.click(() => {
+      toggleBtn.toggleClass('show');
+      if(toggleBtn.hasClass('show')){
+        pwd.attr('type', 'text');
+      } else {
+        pwd.attr('type', 'password');
+      }
+    })
+  </script>
+</body>
+</html>

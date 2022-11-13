@@ -1,0 +1,126 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #8cccff;
+}
+
+.box
+{
+  position: relative;
+  width: 400px;
+}
+
+.box .inputbox
+{
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.box .inputbox input
+{
+  position: relative;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 10px 5px;
+}
+
+.box .inputbox #toggleBtn
+{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .inputbox #toggleBtn ion-icon
+{
+  position: absolute;
+}
+
+.box .inputbox #toggleBtn #hide,
+.box .inputbox #toggleBtn.show #show
+{
+  opacity: 0;
+}
+
+.box .inputbox #toggleBtn #show,
+.box .inputbox #toggleBtn.show #hide
+{
+  opacity: 1;
+}
+
+.validation
+{
+  background: #376488;
+  padding: 12px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.validation ul
+{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.validation ul li
+{
+  position: relative;
+  list-style: none;
+  color: #fff;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.validation ul li.valid
+{
+  color:rgba(255, 255, 255, 0.5);
+}
+
+.validation ul li::before
+{
+  content: '\f192';
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  font-family: fontAwesome;
+  display: inline-flex;
+  transition: 0.5s;
+}
+
+.validation ul li.valid::before
+{
+  content: '\f00c';
+  color: #0f0;
+}
+
+
+
+
+
+
