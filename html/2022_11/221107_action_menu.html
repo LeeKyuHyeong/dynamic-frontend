@@ -6,8 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="/css/2022_11/221107_action_menu.css">
+  
 </head>
 <body>
-  
+  <div class="navigation">
+    <div class="menuToggle"></div>
+    <div class="menu">
+      <ul>
+        <li style="--i:0.1s;">
+          <a href="#">
+            <ion-icon name="camera-outline"></ion-icon>
+          </a>
+        </li>
+        <li style="--i:0.2s;">
+          <a href="#">
+            <ion-icon name="settings-outline"></ion-icon>
+          </a>
+        </li>
+        <li style="--i:0.3s;">
+          <a href="#">
+            <ion-icon name="trash-outline"></ion-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    let menuToggle = $('.menuToggle');
+
+    menuToggle.click(() => {
+      menuToggle.toggleClass('active');
+    })
+
+  </script>
 </body>
 </html>
