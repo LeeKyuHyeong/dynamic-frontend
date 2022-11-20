@@ -133,6 +133,7 @@ body
   font-size: 2em;
   text-decoration: none;
   color: #555;
+  transition: 0.5s;
 }
 
 .menu ul li:hover a
