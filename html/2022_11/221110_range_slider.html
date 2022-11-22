@@ -8,6 +8,15 @@
   <link rel="stylesheet" type="text/css" href="/css/2022_11/221110_range_slider.css">
 </head>
 <body>
-  
+  <div class="box">
+    <input type="range" class="range" value="0" min="0" max="100" onmousemove="rangeSlider(this.value)">
+    <span id="rangeValue">0</span>
+  </div>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    function rangeSlider(value) {
+      $('#rangeValue').html(value);
+    }
+  </script>
 </body>
 </html>
