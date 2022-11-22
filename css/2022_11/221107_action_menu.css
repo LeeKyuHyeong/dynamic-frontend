@@ -124,7 +124,7 @@ body
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
-  transition-delay: calc(0.5s + var(--i));
+  transition-delay: calc(0.6s + var(--i));
 }
 
 .menu ul li a
