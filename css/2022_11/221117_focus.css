@@ -54,8 +54,7 @@ h2 span:hover i::before
   width: 2px;
   height: 8px;
   background: #fff;
-  box-shadow: 0 90px #fff, 45px 90px #fff, 45px 0px #fff;
-  
+  box-shadow: 0 90px #fff, 45px 90px #fff, 45px 0px #fff;  
 }
 
 h2 span:hover i::after
@@ -68,7 +67,6 @@ h2 span:hover i::after
   height: 2px;
   background: #fff;
   box-shadow: 0 98px #fff, 39px 98px #fff, 39px 0 #fff;
-  
 }
 
 
