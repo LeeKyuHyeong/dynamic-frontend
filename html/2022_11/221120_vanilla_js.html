@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2022_11/221120_vanilla_js.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+  <script>
+    let body = $('body');
+    
+    body.mousemove((e) => {
+      let x = e.offsetX;
+      let y = e.offsetY;
+      let particles = document.createElement('span');
+
+      particles.style.left = x + 'px';
+      particles.style.top = y + 'px';
+
+      let size = Math.random() * 8;
+      particles.style.width = 2 + size + 'px';
+      particles.style.height = 2 + size + 'px';
+
+      let transformValue = Math.random() * 360;
+      particles.style.transform = 'rotate(' + transformValue + 'deg';
+
+      body.append(particles);
+
+      setTimeout(() => {
+        particles.remove()
+      }, 2000)
+    })
+  </script>
+</body>
+</html>
