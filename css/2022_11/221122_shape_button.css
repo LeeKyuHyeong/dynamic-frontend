@@ -11,5 +11,28 @@ body
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #365fa1;
+  background: #cbe058;
+}
+
+a
+{
+  position: relative;
+  padding: 15px 40px;
+  background: #fff;
+  color: #555;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+}
+
+a:hover
+{
+  background: #a7b612;
+  color: #fff;
+  letter-spacing: 4px;
+  clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 10% 100%, 0% 50%, 10% 0%);
 }
