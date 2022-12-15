@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2022_11/221123_magic_menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="navigation">
+    <ul>
+      <li class="list active" data-color="#f53b57">
+        <a href="#">
+          <span class="icon">
+            <i class="fa-solid fa-house"></i>
+          </span>
+          <span class="title">Home</span>
+        </a>
+      </li>
+      <li class="list" data-color="#3c40c6">
+        <a href="#">
+          <span class="icon">
+            <i class="fa-solid fa-user"></i>
+          </span>
+          <span class="title">Profile</span>
+        </a>
+      </li>
+      <li class="list" data-color="#05c46b">
+        <a href="#">
+          <span class="icon">
+            <i class="fa-solid fa-message"></i>
+          </span>
+          <span class="title">Message</span>
+        </a>
+      </li>
+      <li class="list" data-color="#0fbcf9">
+        <a href="#">
+          <span class="icon">
+            <i class="fa-solid fa-circle-question"></i>
+          </span>
+          <span class="title">Help</span>
+        </a>
+      </li>
+      <li class="list" data-color="#ffa801">
+        <a href="#">
+          <span class="icon">
+            <i class="fa-solid fa-gear"></i>
+          </span>
+          <span class="title">Settings</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+
+  <!-- add active class on hovered item -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    let list = $('.list');
+    for(let i = 0; i < list.length; i++) {
+      list[i].onmouseover = function() {
+        let j = 0;
+        while(j < list.length) {
+          list[j++].className = 'list';
+          //list[j++].removeClass('active');
+        }
+        list[i].className = 'list active';
+        //list[i].addClass('active');
+      }
+    }
+
+    //change body color according to indicator
+
+
+    $.each(list, function(i, element) {
+      element.onmouseenter = function(e) {
+        let bg = $('body');
+        let color = $(this).attr("data-color");
+        console.log(color);
+        bg.css("background", color);
+      }
+    });
+  </script>
+</body>
+</html>
