@@ -77,6 +77,7 @@
     $.each(list, function(i, element) {
       element.onmouseenter = function(e) {
         let bg = $('body');
+        //그 리스트의 화면 색
         let color = $(this).attr("data-color");
         console.log(color);
         bg.css("background", color);
