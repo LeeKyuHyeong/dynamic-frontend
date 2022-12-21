@@ -8,6 +8,31 @@
   <link rel="stylesheet" type="text/css" href="/css/2022_11/221126_profile_card.css">
 </head>
 <body>
-  
+  <div class="card">
+    <div class="contentBx">
+      <div class="content">
+        <h2>Someone Famous<br><span>Creative Backend</span></h2>
+        <div class="imgBx">
+          <img src="/img/최우식.jpg">
+        </div>
+        <button>Hire Me</button>
+      </div>
+    </div>
+    <div class="toggle">
+      <span></span>
+    </div>
+  </div>
 </body>
+<script>
+  let toggle = document.querySelector('.toggle');
+  let card = document.querySelector('.card');
+
+
+  // toggle.addEventListener('click', function() {
+  //   toggle.classList.toggle('active');
+  // })
+  toggle.onclick = () => {
+    card.classList.toggle('active');
+  }
+</script>
 </html>
