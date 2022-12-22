@@ -18,6 +18,9 @@ ul
 {
   position: relative;
   transform: skewY(-15deg);
+  display: flex;
+  flex-direction: column;
+  margin: 0 100px;
 }
 
 ul li
@@ -121,7 +124,12 @@ ul li:hover span
   opacity: 1;
 }
 
-
+ul li:nth-child(4):hover,
+ul li:nth-child(4):hover::before,
+ul li:nth-child(4):hover::after
+{
+  background: linear-gradient(45deg, #fff176, #ec407a, #ff5252, #8e24aa);
+}
 
 
 
