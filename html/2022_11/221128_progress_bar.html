@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2022_11/221128_progress_bar.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="percent" style="--clr:#04fc43;--i:85;">
+        <div class="dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70"></circle>
+        </svg>
+        <div class="number">
+          <h2>85<span>%</span></h2>
+          <p>Html</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="percent" style="--clr:#93dfda;--i:67;">
+        <div class="dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70"></circle>
+        </svg>
+        <div class="number">
+          <h2>67<span>%</span></h2>
+          <p>CSS</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="percent" style="--clr:#aae004;--i:41;">
+        <div class="dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70"></circle>
+        </svg>
+        <div class="number">
+          <h2>41<span>%</span></h2>
+          <p>JavaScript</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="percent" style="--clr:#be0449;--i:99;">
+        <div class="dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70"></circle>
+        </svg>
+        <div class="number">
+          <h2>99<span>%</span></h2>
+          <p>TypeScript</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn">toggle</div>
+
+  <script>
+    let btn = document.querySelector('.btn');
+    let percent = document.querySelectorAll('.percent');
+    let card = document.querySelectorAll('.card');
+
+    btn.onclick = function() {
+      console.log("클릭", percent[0]);
+      for(let i = 0; i < percent.length; i++) {
+        card[i].classList.toggle('active');
+        if(percent[i].style.opacity == 0) {
+          percent[i].style.opacity = 1;
+        } else {
+          percent[i].style.opacity = 0;
+        }
+      }
+    }
+    for(let i = 0; i < percent.length; i++) {
+      percent[i].onmouseenter = function() {
+        console.log('마우스오버');
+        this.style.opacity = 1;
+      }
+      percent[i].onmouseout = function() {
+        console.log('마우스아웃');
+        this.style.opacity = 0;
+      }
+    }
+    
+
+  </script>
+</body>
+</html>
