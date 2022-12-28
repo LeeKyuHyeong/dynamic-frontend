@@ -1,12 +1,10 @@
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body
-{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +12,7 @@ body
   background: #434750;
 }
 
-ul
-{
+ul {
   position: relative;
   transform: skewY(-15deg);
   display: flex;
@@ -23,8 +20,7 @@ ul
   margin: 0 100px;
 }
 
-ul li
-{
+ul li {
   position: relative;
   list-style: none;
   width: 140px;
@@ -34,14 +30,12 @@ ul li
   z-index: calc(1 * var(--i));
 }
 
-ul li:hover
-{
+ul li:hover {
   transform: translateX(-50px);
   background: var(--clr);
 }
 
-ul li::before
-{
+ul li::before {
   content: '';
   position: absolute;
   top: 0;
@@ -55,14 +49,12 @@ ul li::before
   transition: 0.5s;
 }
 
-ul li:hover::before
-{
+ul li:hover::before {
   background: var(--clr);
   filter: brightness(0.7);
 }
 
-ul li::after
-{
+ul li::after {
   content: '';
   position: absolute;
   top: -40px;
@@ -76,14 +68,12 @@ ul li::after
   transition: 0.5s;
 }
 
-ul li:hover::after
-{
+ul li:hover::after {
   background: var(--clr);
   filter: brightness(0.9);
 }
 
-ul li a
-{
+ul li a {
   text-decoration: none;
   color: #999;
   display: block;
@@ -92,18 +82,15 @@ ul li a
   transition: 0.5s;
 }
 
-ul li:hover a
-{
+ul li:hover a {
   color: #fff;
 }
 
-ul li:last-child::after
-{
+ul li:last-child::after {
   box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
 }
 
-ul li span
-{
+ul li span {
   position: absolute;
   top: 0;
   left: -40px;
@@ -119,37 +106,12 @@ ul li span
   font-size: 1.25em;
 }
 
-ul li:hover span
-{
+ul li:hover span {
   opacity: 1;
 }
 
 ul li:nth-child(4):hover,
 ul li:nth-child(4):hover::before,
-ul li:nth-child(4):hover::after
-{
+ul li:nth-child(4):hover::after {
   background: linear-gradient(45deg, #fff176, #ec407a, #ff5252, #8e24aa);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
