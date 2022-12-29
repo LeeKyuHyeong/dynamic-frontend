@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2022_12/221203_simple_popup.css">
+</head>
+<body>
+  <div class="circle">
+    <div class="text">
+      <h2>HTML / CSS</h2>
+      <span>공부한척 샬라샬라 이러쿵저러쿵 그냥 긴 글이 필요해서 쓰는 글 디자인은 어려워 디자이너 고생많아 나는 디자이너는 아니야 디자이너도 아닌데 이런거 공부하고있냐고? 미안~ 이번엔 그림자, transform 등을 알아봤습니다 안녕</span>
+    </div>
+  </div>
+  <script>
+    let circle = document.querySelector('.circle');
+    circle.onclick = function() {
+      this.classList.toggle('down');
+    }
+  </script>
+</body>
+</html>
