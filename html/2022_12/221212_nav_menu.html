@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2022_12/221212_nav_menu.css">
+</head>
+<body>
+  <div class="navigation">
+    <ul>
+      <li class="list active" style="--i:0;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li class="list" style="--i:1;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="people-outline"></ion-icon>
+          </span>
+          <span class="text">Profile</span>
+        </a>
+      </li>
+      <li class="list" style="--i:2;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="chatbox-outline"></ion-icon>
+          </span>
+          <span class="text">Messages</span>
+        </a>
+      </li>
+      <li class="list" style="--i:3;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="camera-outline"></ion-icon>
+          </span>
+          <span class="text">Photos</span>
+        </a>
+      </li>
+      <li class="list" style="--i:4;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="settings-outline"></ion-icon>
+          </span>
+          <span class="text">Settings</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    let list = document.querySelectorAll('li');
+
+    function activeLink() {
+      list.forEach((item) => {
+        item.classList.remove('active');
+        this.classList.add('active');
+      })
+    }
+
+    list.forEach((item) => {
+      item.addEventListener('click', activeLink);
+    })
+  </script>
+</body>
+</html>
