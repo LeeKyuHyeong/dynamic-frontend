@@ -60,6 +60,7 @@ body
   align-items: center;
   color: #aaa;
   border-radius: 50%;
+  transition: 0.5s;
 }
 
 .navigation li.active a .icon
