@@ -38,6 +38,7 @@
     </div>
 
     <div class="content">
+
       <div class="contentBx active" id="content1">
         <div class="card">
           <div class="imgBx">
@@ -53,13 +54,15 @@
             </ul>
           </div>
         </div>
+      </div>
+
       <div class="contentBx" id="content2">
         <div class="card">
           <div class="imgBx">
             <img src="/img/이도현.jpg">
           </div>
           <div class="textBx">
-            <h2>Korean Actor<br><span>Kim.D.M</span></h2>
+            <h2>Korean Actor<br><span>Lee.D.H</span></h2>
             <ul class="sci">
               <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -68,13 +71,15 @@
             </ul>
           </div>
         </div>
+      </div>
+
       <div class="contentBx" id="content3">
         <div class="card">
           <div class="imgBx">
-            <img src="/img/한소희.jpg">
+            <img src="/img/한소희.png">
           </div>
           <div class="textBx">
-            <h2>Korean Actor<br><span>Kim.D.M</span></h2>
+            <h2>Korean Actor<br><span>Han.S.H</span></h2>
             <ul class="sci">
               <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -83,13 +88,15 @@
             </ul>
           </div>
         </div>
+      </div>
+
       <div class="contentBx" id="content4">
         <div class="card">
           <div class="imgBx">
             <img src="/img/한지민.jpg">
           </div>
           <div class="textBx">
-            <h2>Korean Actor<br><span>Kim.D.M</span></h2>
+            <h2>Korean Actor<br><span>Han.J.M</span></h2>
             <ul class="sci">
               <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -98,13 +105,15 @@
             </ul>
           </div>
         </div>
+      </div>
+
       <div class="contentBx" id="content5">
         <div class="card">
           <div class="imgBx">
             <img src="/img/채수빈.jpg">
           </div>
           <div class="textBx">
-            <h2>Korean Actor<br><span>Kim.D.M</span></h2>
+            <h2>Korean Actor<br><span>Chae.S.B</span></h2>
             <ul class="sci">
               <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -113,13 +122,15 @@
             </ul>
           </div>
         </div>
+      </div>
+
       <div class="contentBx" id="content6">
         <div class="card">
           <div class="imgBx">
             <img src="/img/김성철.jpg">
           </div>
           <div class="textBx">
-            <h2>Korean Actor<br><span>Kim.D.M</span></h2>
+            <h2>Korean Actor<br><span>Kim.S.C</span></h2>
             <ul class="sci">
               <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -128,13 +139,15 @@
             </ul>
           </div>
         </div>
+      </div>
+
       <div class="contentBx" id="content7">
         <div class="card">
           <div class="imgBx">
             <img src="/img/최우식.jpg">
           </div>
           <div class="textBx">
-            <h2>Korean Actor<br><span>Kim.D.M</span></h2>
+            <h2>Korean Actor<br><span>Choi.U.S</span></h2>
             <ul class="sci">
               <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -143,13 +156,14 @@
             </ul>
           </div>
         </div>
+      </div>
       <div class="contentBx" id="content8">
         <div class="card">
           <div class="imgBx">
             <img src="/img/김유정.jpg">
           </div>
           <div class="textBx">
-            <h2>Korean Actor<br><span>Kim.D.M</span></h2>
+            <h2>Korean Actor<br><span>Kim.Y.J</span></h2>
             <ul class="sci">
               <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -176,12 +190,12 @@
     //   e.addEventListener('click', activeLink);
     // })
     for(let i = 0; i < imgBx.length; i++) {
-      imgBx[i].addEventListener('mouseover', function() {
+      imgBx[i].addEventListener('click', function() {
         for(let i = 0; i < contentBx.length; i++) {
           contentBx[i].className = 'contentBx';
         }
         // document.getElementById(this.dataset.id).className = 'contentBx active';
-        document.getElementById(this.dataset.id).classList.add('active');
+        document.getElementById(this.dataset.id).className = 'contentBx active';
 
         for(let i = 0; i < imgBx.length; i++) {
           imgBx[i].className = 'imgBx';
