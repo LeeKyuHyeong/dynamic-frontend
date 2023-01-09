@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2022_12/221221_emoji_effects.css">
+</head>
+<body>
+  <script>
+    document.addEventListener('mousemove', function(e) {
+      let body = document.querySelector('body');
+      let emoji = document.createElement('span');
+      let x = e.offsetX;
+      let y = e.offsetY;
+
+      emoji.style.left = x+'px';
+      emoji.style.top = y+'px';
+
+      body.appendChild(emoji);
+
+      setTimeout(function() {
+        emoji.remove();
+      }, 1000);
+    })
+  </script>
+</body>
+</html>
