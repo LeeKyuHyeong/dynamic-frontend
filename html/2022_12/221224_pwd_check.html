@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2022_12/221224_pwd_check.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Password Strength Check</h3>
+    <div class="inputBox">
+      <input type="password" placeholder="password" id="myPassword" required>
+      <div class="show"></div>
+    </div>
+    <div class="strengthMeter"></div>
+  </div>
+  <script>
+    window.onload = function(){
+      function strength(password) {
+        let i = 0;
+        if(password.length > 6) {
+          i++;
+        }
+        if(password.length >= 10) {
+          i++;
+        }
+        if(/[A-Z]/.test(password)) {
+          i++;
+        }
+        if(/[0-9]/.test(password)) {
+          i++;
+        }
+        if(/[A-Za-z0-8]/.test(password)) {
+          i++;
+        }
+        return i;
+      }
+
+    }
+
+    let container = document.querySelector('.container');
+    document.addEventListener("keyup", function(e) {
+      let password = document.querySelector('#myPassword').value;
+
+      let strength = strength(password);
+      if(strength <= 2) {
+        container.classList.add('weak');
+        container.classList.remove('medium');
+        container.classList.remove('strong');
+      } else if(strength > 2 && strength <= 4) {
+        container.classList.add('medium');
+        container.classList.remove('weak');
+        container.classList.remove('strong');
+      } else {
+        container.classList.add('strong');
+        container.classList.remove('weak');
+        container.classList.remove('medium');
+      }
+    })
+
+    let pwd = document.getElementById('myPassword');
+    let show = document.querySelector('.show');
+    show.onclick = function() {
+      if(pwd.type === 'password'){
+        pwd.setAttribute('type', 'text');
+        show.classList.add('hide');
+      } else {
+        pwd.setAttribute('type', 'password');
+        show.classList.remove('hide');
+      }
+    }
+  </script>
+</body>
+</html>
