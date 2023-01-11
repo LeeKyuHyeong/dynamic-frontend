@@ -17,8 +17,8 @@
     <div class="strengthMeter"></div>
   </div>
   <script>
-    window.onload = function(){
-      function strength(password) {
+    
+      function setStrength(password) {
         let i = 0;
         if(password.length > 6) {
           i++;
@@ -38,25 +38,23 @@
         return i;
       }
 
-    }
-
     let container = document.querySelector('.container');
     document.addEventListener("keyup", function(e) {
       let password = document.querySelector('#myPassword').value;
 
-      let strength = strength(password);
+      let strength = setStrength(password);
       if(strength <= 2) {
+        container.classList.remove('medium');
+        container.classList.remove('strong');
         container.classList.add('weak');
-        container.classList.remove('medium');
-        container.classList.remove('strong');
       } else if(strength > 2 && strength <= 4) {
-        container.classList.add('medium');
         container.classList.remove('weak');
         container.classList.remove('strong');
+        container.classList.add('medium');
       } else {
-        container.classList.add('strong');
         container.classList.remove('weak');
         container.classList.remove('medium');
+        container.classList.add('strong');
       }
     })
 
