@@ -10,5 +10,76 @@ body
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #fff;
+  background: #161a23;
 }
+.main
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 170px;
+}
+.main .navigation
+{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.main .navigation span
+{
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  transform: translate(calc(14px * var(--x)), calc(14px * var(--y)));
+  transition: transform 0.5s, width 0.5s, height 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+}
+.main .navigation.active span
+{
+  width: 45px;
+  height: 45px;
+  transform: translate(calc(60px * var(--x)), calc(60px * var(--y)));
+}
+.close
+{
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  transition: 0.5s;
+  transition-delay: 0.4s;
+  pointer-events: none;
+}
+.main .navigation.active ~ .close
+{
+  width: 40px;
+  height: 40px;
+  pointer-events: initial;
+  transition-delay: 0.8s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
