@@ -73,10 +73,10 @@ body
   font-size: 1.65em;
   color: var(--clr);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 .menu li:hover a
 {
-  font-size: 2.4em;
+  font-size: 2em;
   box-shadow: 0 0 0 2px var(--clr), 0 0 0 6px #fff;
 }

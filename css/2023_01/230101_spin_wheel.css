@@ -93,6 +93,7 @@ body
 {
   content: '$';
   position: absolute;
+  top: 7px;
   font-size: 0.75em;
 
 }
