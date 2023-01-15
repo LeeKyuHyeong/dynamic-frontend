@@ -170,10 +170,6 @@ body
   inset -10px -10px 15px rgba(255, 255, 255, 0.5);
   border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
 }
-.btns:hover
-{
-  border-radius: 50%;
-}
 .btns::before
 {
   content: '';
@@ -192,7 +188,12 @@ body
   right: -140px;
   width: 80px;
   height: 80px;
-
+  border-radius: 55% 45% 36% 64% / 38% 67% 33% 62%;
+  background: #01b4ff;
+  box-shadow: inset 10px 10px 10px rgba(1, 180, 255, 0.05),
+  15px 25px 10px rgba(1, 180, 255, 0.1),
+  15px 20px 20px rgba(1, 180, 255, 0.1),
+  inset -10px -10px 15px rgba(255, 255, 255, 0.5);
 }
 .btns::after
 {
@@ -205,4 +206,21 @@ body
   border-radius: 50%;
   background: #fff;
   opacity: 0.4;
+}
+.btns.signup::before
+{
+  left: 20px;
+  width: 15px;
+  height: 15px;
+}
+.btns.signup::after
+{
+  left: 40px;
+  top: 25px;
+  width: 5px;
+  height: 5px;
+}
+.btns:hover
+{
+  border-radius: 50%;
 }
