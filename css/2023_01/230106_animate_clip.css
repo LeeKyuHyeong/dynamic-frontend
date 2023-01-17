@@ -24,3 +24,33 @@ section .sec
   height: 100%;
   z-index: 10;
 }
+section .sec.sec1
+{
+  background: #b0ff54;
+  clip-path: circle(200px at 0 0);
+}
+section .sec.sec2
+{
+  background: #03a9f4;
+  clip-path: circle(200px at 100% 100%);
+}
+section h2
+{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 16em;
+}
+section .sec.sec1 h2
+{
+  color: transparent;
+  -webkit-text-stroke: 5px #333;
+}
+section .sec.sec2 h2
+{
+  color: #333;
+  -webkit-text-stroke: 5px #333;
+}
