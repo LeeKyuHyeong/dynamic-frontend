@@ -8,6 +8,68 @@
   <link rel="stylesheet" type="text/css" href="/css/2023_01/230112_new_level.css">
 </head>
 <body>
-  <div class="container"></div>
+  <header>
+    <a href="#" class="logo">Logo</a>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+  <section>
+    <div class="content">
+      <h2>Level Up Your Website with <b>Anime.js</b></h2>
+      <p>또 긴거 쓰라고 하네요 제목은 영언데 왜 이건 한국어냐고요? 길게 쓸 줄 몰랐으니까~ 니가 나의 모든걸 뺏어갔어도 모두가 내 꿈에 바리케이틀 쳐도 내가 나의 기름 더 불을 붙여줘 빛이 나는 마웨</p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+    <div class="container"></div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    let container = document.querySelector('.container');
+    for(let i = 1; i <= 100; i++) {
+      let dot = document.createElement('div');
+      dot.classList.add('element');
+      container.appendChild(dot);
+    }
+
+    let dotAll = document.querySelectorAll('.element');
+    let animation = anime.timeline({
+      targets: dotAll,
+      easing: 'easeInOutExpo',
+      loop: true,
+      delay: anime.stagger(100,{grid: [10, 10], from: 'center'})
+    })
+    animation
+    .add({
+      rotateZ: 180,
+      translateY: anime.stagger(-20, {grid: [10, 10], from: 'center', axis: 'y'}),
+      translateX: anime.stagger(-20, {grid: [10, 10], from: 'center', axis: 'x'}),
+      opacity: 1,
+    })
+    .add({
+      borderRadius: 50,
+    })
+    .add({
+      scale: 0.2,
+      opacity: 1,
+    })
+    animation
+    .add({
+      rotateZ: 180,
+      translateY: anime.stagger(0, {grid: [10, 10], from: 'center', axis: 'y'}),
+      translateX: anime.stagger(0, {grid: [10, 10], from: 'center', axis: 'x'}),
+      opacity: 1,
+    })
+    .add({
+      scale: 1,
+      borderRadius: 0,
+    })
+    .add({
+      rotateZ: -90,
+    })
+  </script>
 </body>
 </html>
