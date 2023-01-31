@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="/css/2023_01/230124_circular_nav.css">
 </head>
+
 <body>
   <ul class="menu">
     <div class="toggle">
@@ -58,13 +59,16 @@
   </ul>
 
   <script>
+    //javascript
     let toggle = document.querySelector('.toggle');
+    
     let menu = document.querySelector('.menu');
+
     toggle.onclick = function() {
       menu.classList.toggle('active');
       toggle.classList.toggle('active');
     }
-
+    
     const list = document.querySelectorAll('li');
     function activeLink() {
       list.forEach((item) => {
