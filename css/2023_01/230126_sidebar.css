@@ -1,0 +1,145 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(31, 26, 26);
+}
+.nav
+{
+  position: relative;
+  left: 15px;
+  width: 80px;
+  height: 90vh;
+  background: #fff;
+  transition: 0.5s;
+  /* overflow: hidden; */
+}
+.nav.open
+{
+  width: 300px;
+}
+.nav .toggle
+{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  /* transition: 0.5s; */
+}
+.nav.open .toggle
+{
+  /* right: 30px; */
+  justify-content: end;
+  padding-right: 30px;
+}
+.nav .toggle::before
+{
+  content: '';
+  position: absolute;
+  top: 35px;
+  width: 40px;
+  height: 2px;
+  background: #000;
+  transition: 0.5s;
+}
+.nav.open .toggle::before
+{
+  transform: rotate(45deg);
+}
+.nav .toggle::after
+{
+  content: '';
+  position: absolute;
+  top: 25px;
+  width: 40px;
+  height: 2px;
+  background: #000;
+  box-shadow: 0px 20px 0px 0px #000;
+  transition: 0.5s;
+}
+.nav.open .toggle::after
+{
+  top: 35px;
+  transform: rotate(135deg);
+  box-shadow: 0 0 0 0 #000;
+}
+.nav .menu
+{
+  position: relative;
+  top: 70px;
+  /* width: 600px; */
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid #d4d4d6;
+}
+.nav .menu li
+{
+  list-style: none;
+  padding: 10px 20px;
+}
+/* .nav .menu li.active
+{
+  background: #000;
+} */
+.nav .menu li a
+{
+  text-decoration: none;
+  color: #000;
+  display: flex;
+}
+.nav .menu li a .icon
+{
+  position: relative;
+  left: -15px;
+  border-radius: 5px;
+  /* background: #f00; */
+  padding: 20px;
+  font-size: 1.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.nav .menu li.active a .icon
+{
+  background: var(--i);
+  transform: translateX(40px);
+  color: #fff;
+  box-shadow: 0 0 10px var(--i),
+  0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.nav .menu li a .text
+{
+  opacity: 0;
+}
+.nav.open .menu li a .text
+{
+  padding: 15px;
+  color: #000;
+  transition: 0.5s;
+  opacity: 1;
+}
+.nav .menu li.active a .text
+{
+  color: var(--i);
+  transform: translateX(35px);
+  transition: 0.5s;
+}

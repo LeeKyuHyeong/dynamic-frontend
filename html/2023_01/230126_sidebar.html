@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2023_01/230126_sidebar.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="toggle"></div>
+    <ul class="menu">
+      <li style="--i:#f82c2c;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li style="--i:#79fd40;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="person-outline"></ion-icon>
+          </span>
+          <span class="text">Profile</span>
+        </a>
+      </li>
+      <li style="--i:#304cff;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="chatbubble-outline"></ion-icon>
+          </span>
+          <span class="text">Messages</span>
+        </a>
+      </li>
+      <li style="--i:#f03ce1;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="camera-outline"></ion-icon>
+          </span>
+          <span class="text">Photos</span>
+        </a>
+      </li>
+      <li style="--i:#36f5ff;">
+        <a href="#">
+          <span class="icon">
+            <ion-icon name="settings-outline"></ion-icon>
+          </span>
+          <span class="text">Settings</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    let nav = document.querySelector('.nav');
+    let toggle = document.querySelector('.toggle');
+
+    toggle.onclick = function() {
+      nav.classList.toggle('open');
+    }
+
+    let list = document.querySelectorAll('li');
+    function activeLink() {
+      list.forEach((e) => {
+        e.classList.remove('active');
+        this.classList.add('active');
+      })
+    }
+    list.forEach((e) => {
+      e.addEventListener('click', activeLink);
+    })
+
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
