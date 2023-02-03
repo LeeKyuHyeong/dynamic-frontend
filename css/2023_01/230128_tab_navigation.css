@@ -1,0 +1,110 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222;
+}
+.nav
+{
+  position: relative;
+  width: 550px;
+  height: 100px;
+  background: #555;
+  border-radius: 10px;
+}
+.nav .menu
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.nav .menu li
+{
+  list-style: none;
+  width: 90px;
+  height: 90px;
+}
+.nav .menu li a
+{
+  text-decoration: none;
+  /* padding: 20px 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.nav .menu li.active a,
+.nav .menu li a:hover
+{
+  opacity: 1;
+}
+.nav .menu li a .icon
+{
+  /* position: relative;
+  display: block;
+  line-height: 85px;
+  text-align: center; */
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5em;
+  transition: 0.5s;
+  transform:  translateY(25px);
+}
+.nav .menu li a:hover .icon
+{
+  color: rgba(255, 255, 255, 1);
+}
+.nav .menu li a .text
+{
+  scale: 0;
+  transition: 0.5s;
+}
+.nav .menu li.active a .icon
+{
+  transform: translateY(10px);
+  color: #45ff35;
+}
+.nav .menu li.active a .text
+{
+  /* background: #45ff35; */
+  scale: 1;
+  transform: translateY(6px);
+  /* color: #000; */
+}
+
+/* .indicator
+{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  /* z-index: -1; */
+}
+.indicator::before
+{
+  content: '';
+  position: absolute;
+  bottom: 14px;
+  left: 10px;
+  width: 80%;
+  height: 16px;
+  background: #29fd53;
+  border-radius: 10px;
+} */
