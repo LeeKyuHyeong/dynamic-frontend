@@ -12,6 +12,7 @@ const Glow = () => {
           <input type="checkbox" name="check" />
           <span></span>
           {/* <i class="fa-solid fa-phone"></i> */}
+
           <FontAwesomeIcon icon={faPhone} />
         </label>
         <label>
