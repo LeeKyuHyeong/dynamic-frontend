@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "../../css/2023_02/230204_analog_clock.css";
 
 const Clock = () => {
