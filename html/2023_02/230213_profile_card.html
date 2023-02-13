@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="/css/2023_02/230213_profile_card.css">
+</head>
+<body>
+  <div class="card">
+    <div class="user">
+      <div class="imgBx">
+        <img src="/img/박보영profile.jpg" alt="">
+      </div>
+      <div class="content">
+        <h2>Someone Famous<br><span>Korean Actress</span></h2>
+      </div>
+      <div class="toggle"></div>
+    </div>
+    <ul class="contact">
+      <li style="--clr:#c71610;--i:0;">
+        <a href="#">
+          <div class="iconBx">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <p>someone@email.com</p>
+        </a>
+      </li>
+      <li style="--clr:#171515;--i:1;">
+        <a href="#">
+          <div class="iconBx">
+            <i class="fa-brands fa-github"></i>
+          </div>
+          <p>gitHub@email.com</p>
+        </a>
+      </li>
+      <li style="--clr:#0a66c2;--i:2;">
+        <a href="#">
+          <div class="iconBx">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+          <p>linkedIn@email.com</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let card = document.querySelector('.card');
+
+    toggle.onclick = function() {
+      card.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
