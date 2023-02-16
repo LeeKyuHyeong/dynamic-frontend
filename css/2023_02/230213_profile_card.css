@@ -184,4 +184,5 @@ body
 .card .contact li a:hover p
 {
   color: #111;
+  font-size: 1.2em;
 }
