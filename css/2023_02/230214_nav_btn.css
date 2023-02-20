@@ -88,3 +88,30 @@ body
   background: #fff;
   transform: translateY(0px) rotate(315deg) scale(0.6);
 }
+.navigation li
+{
+  list-style: none;
+  transition: 0.5s;
+  transform: scale(0);
+}
+.navigation.active li
+{
+  transition-delay: 0.75s;
+  display: flex;
+  transform: scale(1);
+}
+.navigation li a
+{
+  text-decoration: none;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.navigation li a:hover
+{
+  background: #ff4181;
+  color: #fff;
+}
