@@ -1,0 +1,90 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fd3366, #cf29f8);
+}
+.navigation
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+.navigation.active
+{
+  width: 600px;
+}
+.navigation .toggle
+{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #f00;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-delay: 0.5s;
+}
+.navigation.active .toggle
+{
+  background: #ff4181;
+  transition-delay: 0s;
+  transform: translateY(60px);
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+.navigation .toggle::before
+{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  transform: translateY(-5px);
+  background: #333;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.navigation .toggle::after
+{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  transform: translateY(5px);
+  background: #333;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.navigation.active .toggle::before
+{
+  background: #fff;
+  transform: translateY(0px) rotate(45deg) scale(0.6);
+}
+.navigation.active .toggle::after
+{
+  background: #fff;
+  transform: translateY(0px) rotate(315deg) scale(0.6);
+}

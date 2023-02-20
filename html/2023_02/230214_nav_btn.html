@@ -8,6 +8,15 @@
   <link rel="stylesheet" type="text/css" href="/css/2023_02/230214_nav_btn.css">
 </head>
 <body>
-  
+  <ul class="navigation">
+    <span class="toggle"></span>
+  </ul>
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    toggle.onclick = function() {
+      navigation.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
