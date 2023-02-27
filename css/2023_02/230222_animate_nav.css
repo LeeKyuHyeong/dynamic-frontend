@@ -10,79 +10,110 @@ body
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #fd1965, #ae07bd);
+  background: linear-gradient(135deg, #e01e63, #673ab7);
 }
 .navigation
 {
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background: #fff;
-  border-radius: 70px;
+  border-radius: 50%;
   transition: 0.5s;
+  transition-delay: 0.5s;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
 }
 .navigation.active
 {
-  width: 650px;
-  min-height: 20vh;
+  width: 600px;
 }
 .navigation .toggle
 {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  position: absolute;
+  width: 60px;
+  height: 60px;
   background: #fff;
-  cursor: pointer;
+  border-radius: 50%;
   transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-delay: 0.5s;
+}
+.navigation.active .toggle
+{
+  background: #ff4181;
+  transition-delay: 0s;
+  transform: translateY(60px);
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
 }
 .navigation .toggle::before
 {
   content: '';
   position: absolute;
-  top: 20px;
-  left: 50%;
   width: 30px;
-  height: 2px;
-  transform: translateX(-50%);
-  background: #000;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(-5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
 }
 .navigation .toggle::after
 {
   content: '';
   position: absolute;
-  top: 30px;
-  left: 50%;
   width: 30px;
-  height: 1.5px;
-  transform: translateX(-50%);
-  background: #000;
+  height: 3px;
+  border-radius: 3px;
+  background: #333;
+  transform: translateY(5px);
+  transition: 0.5s;
+  transition-delay: 0.5s;
 }
-.navigation.active .toggle
+.navigation.active .toggle::before
 {
-  transform: translateY(60px);
-  background: #f00;
+  transition-delay: 0s;
+  background: #fff;
+  transform: translateY(0px) rotate(45deg) scale(0.6);
 }
-.navigation ul
+.navigation.active .toggle::after
 {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-  gap: 10px;
+  transition-delay: 0s;
+  background: #fff;
+  transform: translateY(0px) rotate(315deg) scale(0.6);
 }
-.navigation ul li
+.navigation li
 {
   list-style: none;
-  display: flex;
+  transition: 0.5s;
+  transform: scale(0);
 }
-.navigation ul li a
+.navigation.active li
+{
+  transition-delay: 0.75s;
+  display: flex;
+  transform: scale(1);
+}
+.navigation li a
 {
   text-decoration: none;
-  color: #000;
+  color: #333;
   text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 0.1em;
-  padding: 10px 20px;
-  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.navigation li a:hover
+{
+  background: #ff4181;
+  color: #fff;
 }
