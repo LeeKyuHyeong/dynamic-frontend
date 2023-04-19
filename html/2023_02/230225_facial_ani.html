@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/2023_02/230225_facial_ani.css">
+</head>
+<body>
+  
+  <h1></h1>
+
+  <div class="navigation">
+    <div class="logo">
+      <img src="/img/avatar/avtarlogo.png" alt="">
+    </div>
+    <ul class="nav">
+      <li>
+        <a href="#">
+          <span class="txt">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="txt">Settings</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="txt">MyPage</span>
+        </a>
+      </li>
+    </ul>
+    <div class="toggle"></div>
+  </div>
+  <div class="content">
+    
+  </div>
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    toggle.onclick = function() {
+      navigation.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

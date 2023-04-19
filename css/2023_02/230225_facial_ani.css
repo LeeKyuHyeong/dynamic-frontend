@@ -1,0 +1,125 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #d4d4d6;
+}
+.navigation
+{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #000;
+  display: flex;
+}
+.navigation .logo
+{
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+.navigation .logo img
+{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.navigation .nav
+{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: #222;
+}
+.navigation .nav li
+{
+  list-style: none;
+}
+.navigation .nav li a
+{
+  text-decoration: none;
+  padding: 10px 30px;
+}
+.navigation .nav li a:hover .txt
+{
+  letter-spacing: 0.1em;
+  transition: 0.5s;
+}
+.navigation .nav li a .txt
+{
+  color: #fff;
+  background: #000;
+  transition: 0.5s;
+}
+.navigation .toggle
+{
+  position: relative;
+  align-self: end;
+  width: 70px;
+  height: 70px;
+  background: #f00;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navigation .toggle::before
+{
+  content: '';
+  position: absolute;
+  top: 33px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1.5px;
+  background: #fff;
+  transition: 0.5s;
+}
+.navigation .toggle::after
+{
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: #fff;
+  box-shadow: 0px 20px 0px #fff;
+  transition: 0.5s;
+}
+.navigation.active .toggle
+{
+
+}
+.navigation.active .toggle::before
+{
+  transform: translateX(-50%) rotate(45deg);
+  height: 2px;
+  transition: 0.5s;
+}
+.navigation.active .toggle::after
+{
+  top: 33px;
+  transform: translateX(-50%) rotate(-45deg);
+  box-shadow: 0 0 0 #fff;
+  transition: 0.5s;
+}
+.content
+{
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-shadow: 1px 1px 1px #000;
+}
