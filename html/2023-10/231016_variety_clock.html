@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/2023-10/231016_variety_clock.css">
+
+</head>
+
+<body>
+  <div class="clock">
+    <div class="digital" style="--clr: #ff2972;">
+      <div class="screen" data-text="Hours">
+        <div class="time">
+          <div id="hour"></div>
+        </div>
+      </div>
+    </div>
+    <div class="digital" style="--clr: #fee800;">
+      <div class="screen" data-text="Minutes">
+        <div class="time">
+          <div id="minutes"></div>
+        </div>
+      </div>
+    </div>
+    <div class="digital" style="--clr: #04fc43;">
+      <div class="screen" data-text="Seconds">
+        <div class="time">
+          <div id="seconds"></div>
+        </div>
+      </div>
+    </div>
+    <div class="digital">
+      <div class="box" id="hr" style="--clr:#ff2972;"></div>
+      <div class="box" id="mm" style="--clr:#fee800;"></div>
+      <div class="box" id="ss" style="--clr:#04fc43;"></div>
+      <div id="ampm"></div>
+    </div>
+  </div>
+
+  <script>
+    let hh = document.querySelector('#hour');
+    let mi = document.querySelector('#minutes');
+    let se = document.querySelector('#seconds');
+    let ampm = document.querySelector('#ampm');
+
+    let hr = document.querySelector('#hr');
+    let mm = document.querySelector('#mm');
+    let ss = document.querySelector('#ss');
+
+    setInterval(() => {
+
+      let h = new Date().getHours();
+      let m = new Date().getMinutes();
+      let s = new Date().getSeconds();
+
+      var am = h >= 12 ? 'PM' : 'AM';
+
+      if (h > 12) {
+        h = h - 12;
+      }
+
+      if (h < 10) { h = '0' + h; }
+      if (m < 10) { m = '0' + m; }
+      if (s < 10) { s = '0' + s; }
+
+      hh.innerHTML = h;
+      mi.innerHTML = m;
+      se.innerHTML = s;
+
+      ampm.innerHTML = am;
+
+      hr.style.transform = `rotateZ(${h * 30}deg)`;
+      mm.style.transform = `rotateZ(${m * 6}deg)`;
+      ss.style.transform = `rotateZ(${s * 6}deg)`;
+    })
+
+  </script>
+</body>
+
+</html>
