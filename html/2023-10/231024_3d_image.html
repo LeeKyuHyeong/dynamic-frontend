@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/2023-10/231024_3d_image.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <span style="--i:1;">
+        <img src="/img/2023-10/231020/psn1.jpg" alt="">
+      </span>
+      <span style="--i:2;">
+        <img src="/img/2023-10/231020/psn2.jpg" alt="">
+      </span>
+      <span style="--i:3;">
+        <img src="/img/2023-10/231020/psn3.jpg" alt="">
+      </span>
+      <span style="--i:4;">
+        <img src="/img/2023-10/231020/psn4.jpg" alt="">
+      </span>
+      <span style="--i:5;">
+        <img src="/img/2023-10/231020/psn5.jpg" alt="">
+      </span>
+      <span style="--i:6;">
+        <img src="/img/2023-10/231020/psn6.jpg" alt="">
+      </span>
+      <span style="--i:7;">
+        <img src="/img/박보영profile.jpg" alt="">
+      </span>
+      <span style="--i:8;">
+        <img src="/img/한소희.png" alt="">
+      </span>
+    </div>
+    <div class="btns">
+      <div class="btn prev"></div>
+      <div class="btn next"></div>
+    </div>
+  </div>
+  <script>
+    let prev = document.querySelector('.prev');
+    let next = document.querySelector('.next');
+    let box = document.querySelector('.box');
+
+    let degrees = 0;
+    prev.addEventListener('click', function () {
+      degrees += 45;
+      box.style = `transform: perspective(1000px) rotateY(${degrees}deg)`;
+    })
+    next.addEventListener('click', function () {
+      degrees -= 45;
+      box.style = `transform: perspective(1000px) rotateY(${degrees}deg)`;
+    })
+  </script>
+</body>
+
+</html>
