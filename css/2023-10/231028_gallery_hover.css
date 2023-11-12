@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background: url(/img/한소);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 800px;
+  height: 500px;
+  background: #000;
+  transition: 0.25s;
+}
+
+.container .box {
+  position: relative;
+  background: var(--img);
+  background-position: center;
+  background-size: cover;
+  transition: 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(0) brightness(1.25);
+}
+
+.container:hover .box {
+  filter: grayscale(1);
+}
+
+.container .box:hover {
+  filter: grayscale(0) brightness(1.25);
+}
+
+.container:has(.one:hover) {
+  grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container:has(.two:hover) {
+  grid-template-columns: 0.5fr 2fr 0.5fr 0.5fr 0.5fr;
+}
+
+.container:has(.third:hover) {
+  grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+}
+
+.container:has(.forth:hover) {
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 2fr 0.5fr;
+}
+
+.container:has(.fifth:hover) {
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+}
+
+.container .box::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 100%;
+  height: calc(100% + 2px);
+  background: linear-gradient(#000, transparent, #000);
+}
+
+.container .box:nth-child(even) {
+  transform: translateY(30px);
+}
+
+.container .box:nth-child(odd) {
+  transform: translateY(-30px);
+}
+
+.container .box::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -100px;
+  background: #fff;
+  color: #000;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 5px 10px;
+  white-space: nowrap;
+  transition: 0.5s;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  opacity: 0;
+  transition-delay: 0s;
+  -webkit-box-reflect: below 2px linear-gradient(transparent, #0003);
+}
+
+.container .box:hover::after {
+  opacity: 1;
+  bottom: -60px;
+  transition-delay: 0.25s;
+}
