@@ -129,6 +129,7 @@ header nav a.active .text {
   border-radius: 50%;
   background: transparent;
   box-shadow: -15px 18px #fff;
+  /* opacity: 0; */
 }
 
 header nav a:nth-child(1).active~.indicator {
