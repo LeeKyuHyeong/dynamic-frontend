@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/2024-03/240311_scroll_animation.css">
+</head>
+
+<body>
+  <class class="layer">
+    <img src="/img/2024-03/plane.png" class="plane">
+  </class>
+  <section></section>
+  <div class="text">
+    <h2>Welcome To<br><span>Cebu</span></h2>
+  </div>
+  <section class="sec2"></section>
+
+  <script>
+    let layer = document.querySelector('.layer');
+    window.addEventListener('scroll', function () {
+      let value = window.scrollY;
+      layer.style.left = value * 2 + 'px';
+    })
+  </script>
+</body>
+
+</html>
