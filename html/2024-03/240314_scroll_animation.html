@@ -11,15 +11,33 @@
 <body>
   <section>Scroll Down</section>
   <div class="container">
-    <img src="/img/2024-03/cebu.jpg" alt="">
-    <img src="/img/2024-03/cebu2.jpg" alt="">
-    <img src="/img/2024-03/cebu.jpg" alt="">
-    <img src="/img/2024-03/cebu.jpg" alt="">
-    <img src="/img/2024-03/cebu.jpg" alt="">
-    <img src="/img/2024-03/cebu.jpg" alt="">
-    <img src="/img/2024-03/cebu.jpg" alt="">
+    <img src="/img/2024-03/cebu.jpg" alt="" class="item">
+    <img src="/img/2024-03/cebu2.jpg" alt="" class="item">
+    <img src="/img/2024-01/img1.jpg" alt="" class="item">
+    <img src="/img/2024-01/img2.jpg" alt="" class="item">
+    <img src="/img/2024-01/img3.jpg" alt="" class="item">
+    <img src="/img/eternals/img1.jpg" alt="" class="item">
+    <img src="/img/eternals/img2.jpg" alt="" class="item">
+    <img src="/img/eternals/img3.jpg" alt="" class="item">
   </div>
   <section>Scroll Up</section>
+  <script>
+    let options = {
+      threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+    }
+
+    let callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        entry.target.style.scale = entry.intersectionRatio;
+      });
+    };
+
+    let observer = new IntersectionObserver(callback, options);
+
+    for (const target of document.querySelectorAll('.item')) {
+      observer.observe(target);
+    }
+  </script>
 </body>
 
 </html>

@@ -16,3 +16,20 @@ section {
   font-size: 6em;
   min-height: 100vh;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.container img {
+  width: 700px;
+  height: 700px;
+}
+
+.container .item {
+  transition: 0.5s;
+}
