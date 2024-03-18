@@ -11,6 +11,26 @@
 <body>
   <h2>Just For Fun</h2>
   <div class="container"></div>
+  <script>
+    let container = document.querySelector('.container');
+    let count = 600;
+    for (let i = 0; i < count; i++) {
+      let box = document.createElement('div');
+      box.className = 'box';
+      container.appendChild(box);
+    }
+
+    let box = document.querySelectorAll('.box');
+    for (let j = 0; j < box.length; j++) {
+      let duration = Math.random() * 3;
+      let changeColor = Math.random() * 360;
+      box[j].addEventListener('mouseover', (e) => {
+        box[j].classList.add('active');
+        box[j].style.animationDuration = 1 + duration + 's';
+        box[j].style.filter = `hue-rotate(` + changeColor + `deg)`;
+      })
+    }
+  </script>
 </body>
 
 </html>
