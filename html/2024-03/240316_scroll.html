@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/2024-03/240316_scroll.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+  <section>
+    <h2>Scroll&nbsp;To&nbsp;See&nbsp;Magic</h2>
+  </section>
+  <script>
+    let text = document.querySelector('section h2');
+    let textString = text.textContent;
+    let split = textString.split("");
+
+    text.textContent = "";
+
+    for (let i = 0; i < split.length; i++) {
+      text.innerHTML += "<span>" + split[i] + "</span>";
+    }
+
+    let tl = gsap.timeline();
+
+    tl.from("span", {
+      y: -500,
+      opacity: 0,
+      scrollTrigger: {
+        pin: true,
+        scrub: 1,
+        trigger: "section",
+      },
+      stagger: {
+        amount: 2
+      }
+    })
+  </script>
+</body>
+
+</html>
