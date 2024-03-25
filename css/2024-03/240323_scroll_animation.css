@@ -8,5 +8,35 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #222;
+  background: #0a1b18;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .wheel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #39ffe2;
+  box-shadow: 0 0 10px #39ffe2;
+  border-radius: 50%;
+  transition: transform 5s ease-in-out;
+  overflow: hidden;
+}
+
+.wheel span {
+  position: absolute;
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 100%;
+  background: #39ffe2;
+  transform: rotate(calc(45deg * var(--i)));
+  filter: drop-shadow(0 0 5px #39ffe2);
 }
