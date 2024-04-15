@@ -9,7 +9,12 @@
 </head>
 
 <body>
-
+  <h2 class="text">Direction-Aware</h2>
+  <script>
+    let text = document.querySelector('.text');
+    let spans = Array.from(text.textContent.trim()).map(char => `<span>${char}</span>`).join('');
+    text.innerHTML = spans;
+  </script>
 </body>
 
 </html>
