@@ -17,6 +17,9 @@ body {
   height: 400px;
   background: #333;
   transform: translate(0, 50px) rotate(10deg);
+  -webkit-mask: radial-gradient(circle 50px at top left, transparent 98%, #000);
+  -webkit-mask-size: 50%, 50%;
+  -webkit-mask-repeat: no-repeat
 }
 
 .box:nth-child(2) {
